@@ -7,6 +7,20 @@ header {
     top: 0; 
     width: 100%;
 }
+.Back {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.Back a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.Back a:hover{
+    text-decoration: underline;
+    font-size: larger;
+    color: #D00000;
+}
 .menu {
     list-style: none;
     padding: 15px;
@@ -26,4 +40,17 @@ header {
 .menu li a:hover {
     text-decoration: underline;
     color: #D00000;
+}
+.Profile {
+    list-style-type: none; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 0;
+    margin: 0;
+}
+.Profile li img {
+    width: 100px; 
+    height: auto; 
+    border-radius: 50%; 
 }

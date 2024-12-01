@@ -6,6 +6,7 @@ body {
     background: #000000;
     position: relative;
     overflow: hidden;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .background-video {
@@ -20,18 +21,20 @@ body {
 
 header {
     text-align: center;
-    font-family: 'Lobster', cursive;
-    font-weight: bold;
+
     color: #ffffff; 
     background-color: rgba(118, 64, 204, 0.37); /* พื้นหลังสีม่วงเข้มพร้อมความโปร่งใส 70% */
     padding: 15px;
-    font-size: 2.5rem;
     position: sticky;
-    top: 0; 
     width: 100%;
     z-index: 10;
 }
 
+header h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.5rem;
+    margin: 10px;
+}
 
 
 
@@ -88,17 +91,19 @@ header {
 /*  Profiles */
 section {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 150px); /* เว้นพื้นที่สำหรับ Header และ Footer */
+    justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+    align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+    height: calc(100vh - 150px); /* พื้นที่สูงเต็มหน้าจอ ลบส่วนของ Header และ Footer */
     text-align: center;
+
 }
 
 .Profile {
     list-style-type: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap; /* ปรับให้อยู่ในหลายแถว หากหน้าจอแคบ */
+    justify-content: center; /* จัดโปรไฟล์ให้อยู่ตรงกลางแนวนอน */
+    align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
     gap: 50px; /* เว้นช่องว่างระหว่างโปรไฟล์ */
     padding: 0;
     margin: 0;
@@ -108,20 +113,49 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative; /* ใช้ relative เพื่อให้ tooltip position อยู่เหนือรูปภาพ */
+    margin: 10px;
 }
 
 .Profile li img {
-    width: 150px; /* เพิ่มความกว้างของโปรไฟล์ */
-    height: 150px; /* กำหนดความสูงให้สัมพันธ์กัน */
-    border-radius: 50%; /* ยังคงให้เป็นวงกลม */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .Profile li img:hover {
-    transform: scale(1.2); /* เพิ่มเอฟเฟกต์ขยายเมื่อเลื่อนเมาส์ */
+    transform: scale(1.2); /* ขยายรูปเมื่อ hover */
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
 }
+
+.profile-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip {
+    position: absolute;
+    top: 115%; /* วางข้อความใต้รูปภาพ */
+    left: 50%;
+    transform: translateX(-50%); /* จัดให้อยู่ตรงกลาง */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    visibility: hidden; /* ซ่อนกล่องข้อความเริ่มต้น */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.profile-container:hover .tooltip {
+    visibility: visible; /* แสดง tooltip เมื่อ hover */
+    opacity: 1;
+}
+
 
 @keyframes fadeIn {
     from {
@@ -132,7 +166,4 @@ section {
     }
 }
 
-body {
-    animation: fadeIn 1.5s ease-in-out;
-}
 

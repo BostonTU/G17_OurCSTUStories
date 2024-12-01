@@ -53,3 +53,24 @@ header {
     background-color: #ff0000;
     transform: scale(1.1);
 }
+
+main{
+    padding: 20px;
+}
+
+.info {
+    background-color: rgba(226, 151, 220, 0.37);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* จัดข้อความให้แนวนอนตรงกลาง */
+    align-items: center; /* จัดข้อความให้แนวตั้งตรงกลาง */
+    position: fixed; /* ใช้ fixed เพื่อให้กรอบอยู่ตรงกลางในทุกมุมมอง */
+    top: 50%; /* เลื่อนลงมาครึ่งหนึ่งของหน้า */
+    left: 50%; /* เลื่อนไปทางขวาครึ่งหนึ่งของหน้า */
+    transform: translate(-50%, -50%); /* ปรับตำแหน่งให้กึ่งกลาง */
+    width: 80%; /* กำหนดความกว้าง */
+    max-width: 600px; /* จำกัดความกว้างสูงสุด */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+}

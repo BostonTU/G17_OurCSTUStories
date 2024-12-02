@@ -101,6 +101,16 @@ header {
     animation: fadeIn 1s ease-out;
 }
 
+.info img {
+    max-width: 100%; /* ปรับขนาดให้สัมพันธ์กับ container */
+    height: auto; /* รักษาสัดส่วนของรูปภาพ */
+    border-radius: 10px; /* มุมโค้งมน */
+    margin-bottom: 20px; /* ระยะห่างระหว่างรูปภาพและหัวข้อ */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
+    animation: fadeIn 1.5s ease-out; /* เพิ่มเอฟเฟกต์เลื่อนเข้ามา */
+}
+
+
 h2 {
     font-family: 'Lobster', cursive;
     font-size: 2rem;

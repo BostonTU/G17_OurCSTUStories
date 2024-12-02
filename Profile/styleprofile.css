@@ -132,3 +132,12 @@ body {
         transform: translateY(0);
     }
 }
+
+.info {
+    font-size: 18px; 
+    color: #555; 
+    font-weight: 500; 
+    margin-top: 6px; 
+    text-align: center; 
+}
+

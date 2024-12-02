@@ -99,7 +99,7 @@ button:focus {
 
 @media (min-width: 768px) {
     h1 {
-        font-size: 80px;
+        font-size: 65px;
     }
     button {
         width: 320px;
@@ -108,7 +108,7 @@ button:focus {
 }
 @media (min-width: 1024px) {
     h1 {
-        font-size: 80px;
+        font-size: 65px;
     }
     button {
         padding: 25px 50px;

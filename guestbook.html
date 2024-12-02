@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Guest Book</h1>
-    <form id ="guestBookForm">
+    <form id="guestBookForm" action="#" method="POST">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
         
@@ -20,10 +20,12 @@
         <textarea id="feedback" name="feedback" rows="4" placeholder="Write your feedback"></textarea><br>
         
         <label>Rate our website:</label>
-        <label><input type="radio" name="rating" value="great">great</label>
-        <label><input type="radio" name="rating" value="Good"> Good</label>
-        <label><input type="radio" name="rating" value="Average"> Average</label>
-        <label><input type="radio" name="rating" value="bad"> bad</label><br>
+        <div class="rating-group">
+            <label><input type="radio" name="rating" value="great"> great</label>
+            <label><input type="radio" name="rating" value="Good"> Good</label>
+            <label><input type="radio" name="rating" value="Average"> Average</label>
+            <label><input type="radio" name="rating" value="bad"> bad</label>
+        </div>
         
         <label for="suggestion">Suggestions:</label>
         <select id="suggestion" name="suggestion">
@@ -32,11 +34,9 @@
             <option value="better support">Better customer support</option>
         </select><br>
         
-        <button type="submit">Submit</button>
+        <button type="submit" id="submitBtn">Submit</button>
     </form>
-    <div id="guestBookEntries">
-        <h2>Guest Book Entries</h2>
-        <ul id="entriesList"></ul>
-    </div>
+    
+
 </body>
 </html>

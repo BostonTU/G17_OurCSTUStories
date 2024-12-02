@@ -11,27 +11,8 @@ body {
     background-position: center;
 }
 
-/* Header styles */
-header {
-    text-align: center;
-    font-family: 'Lobster', cursive;
-    font-size: 3rem;
-    color: #fff;
-    background-color: rgba(92, 45, 145, 0.7);
-    padding: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-}
-
-header h1 {
-    margin: 0;
-}
-
-
 .intro {
-    text-align: center;
+    text-align: center;     
     margin: 30px auto;
     padding: 30px;
     max-width: 800px;
@@ -95,19 +76,7 @@ footer {
     z-index: -1; /* ซ่อนวิดีโอไว้เบื้องหลัง */
 }
 
-header {
-    text-align: center;
-    font-family: 'Lobster', cursive;
-    font-weight: bold;
-    color: #ffffff; 
-    background-color: rgba(118, 64, 204, 0.37); /* พื้นหลังสีม่วงเข้มพร้อมความโปร่งใส 70% */
-    padding: 15px;
-    font-size: 2.5rem;
-    position: sticky;
-    top: 0; 
-    width: 100%;
-    z-index: 10;
-}
+
 
 .Back {
     position: absolute;
@@ -203,4 +172,27 @@ main{
 
 .section {
     animation: slideIn 1s ease-in-out;
+}
+
+header {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    color: #ffffff; /* ตัวอักษรสีขาว */
+    background-color: rgba(92, 45, 145, 0.7); /* พื้นหลังสีม่วงเข้มพร้อมความโปร่งใส 70% */
+    padding: 15px;
+    font-size: 2.5rem;
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    z-index: 10; /* ทำให้ header อยู่เหนือเนื้อหาต่างๆ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* เพิ่มเงาให้ดูโดดเด่น */
+    backdrop-filter: blur(10px); /* ทำให้พื้นหลังเบลอเมื่อมีการทำงานกับพื้นหลังที่มีการเลื่อน */
+    text-transform: uppercase; /* ทำให้ตัวอักษรเป็นตัวพิมพ์ใหญ่ทั้งหมด */
+    letter-spacing: 2px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+}
+
+header h1 {
+    margin: 0; /* ลบระยะห่างบนและล่างของ h1 */
 }

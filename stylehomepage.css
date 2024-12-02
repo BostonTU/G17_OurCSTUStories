@@ -51,7 +51,7 @@ header h1 {
     color: #ffffff;
     background-color: #007BFF;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 25px;
     font-size: 1rem;
     transition: all 0.3s ease;
 }
@@ -107,6 +107,7 @@ section {
     gap: 50px; /* เว้นช่องว่างระหว่างโปรไฟล์ */
     padding: 0;
     margin: 0;
+
 }
 
 .Profile li {
@@ -164,5 +165,31 @@ section {
         opacity: 1;
     }
 }
+.guestbook {
+    position: fixed; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.guestbook a {
+    text-decoration: none;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.guestbook a:hover {
+    background-color: #000000;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
 
 

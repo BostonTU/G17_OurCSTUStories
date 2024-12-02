@@ -74,3 +74,35 @@ main{
     max-width: 600px; /* จำกัดความกว้างสูงสุด */
     text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
 }
+.menu {
+    list-style: none;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.menu li {
+    margin: 10px;
+}
+
+.menu li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+    text-decoration: underline;
+    color: #D00000;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

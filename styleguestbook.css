@@ -122,3 +122,48 @@ form button:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     font-size: 16px;
 }
+.Feedback {
+    position: fixed; 
+    bottom: 20px; 
+    left: 2%; 
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.Feedback a {
+    text-decoration: none;
+    color: #fff9f9;
+    background-color: #000000;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 10px;
+    transition: all 0.3s ease;
+}
+
+.Feedback a:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: scale(1.1);
+}
+.Back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+.Back a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #007BFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.Back a:hover {
+    background-color: #ff0000;
+    transform: scale(1.1);
+}

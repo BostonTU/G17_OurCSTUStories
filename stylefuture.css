@@ -44,7 +44,7 @@ header {
     color: #ffffff;
     background-color: #007BFF;
     padding: 10px 20px;
-    border-radius: 25px;
+    border-radius: 5px;
     font-size: 1rem;
     transition: all 0.3s ease;
 }
@@ -79,7 +79,7 @@ header {
     color: #D00000;
 }
 .info {
-    margin-top: 50px;
+    margin-top: 70px;
     background-color: rgba(226, 151, 220, 0.6);
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -102,7 +102,7 @@ header {
 }
 
 .info img {
-    max-width: 100%; /* ปรับขนาดให้สัมพันธ์กับ container */
+    max-width: 80%; /* ปรับขนาดให้สัมพันธ์กับ container */
     height: auto; /* รักษาสัดส่วนของรูปภาพ */
     border-radius: 10px; /* มุมโค้งมน */
     margin-bottom: 20px; /* ระยะห่างระหว่างรูปภาพและหัวข้อ */

@@ -21,7 +21,6 @@ body {
 
 header {
     text-align: center;
-
     color: #ffffff; 
     background-color: rgba(118, 64, 204, 0.37); /* พื้นหลังสีม่วงเข้มพร้อมความโปร่งใส 70% */
     padding: 15px;
@@ -215,4 +214,60 @@ section {
     transform: scale(1.1);
 }
 
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem; 
+    }
 
+    .Back a {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .menu {
+        gap: 10px; 
+    }
+
+    .menu li a {
+        font-size: 1rem;
+    }
+
+    section {
+        flex-direction: column; 
+        gap: 20px; 
+
+    .Profile li img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .guestbook, .Feedback {
+        position: static; 
+        margin: 10px 0;
+    }
+
+    .guestbook a, .Feedback a {
+        font-size: 0.8rem; 
+        padding: 8px 15px;
+    }
+}
+}
+
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 2rem; 
+    }
+
+    .menu li a {
+        font-size: 1.1rem; 
+    }
+
+    .Profile li img {
+        width: 120px; 
+        height: 120px;
+    }
+
+    .guestbook a, .Feedback a {
+        font-size: 0.9rem; 
+    }
+}

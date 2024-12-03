@@ -5,7 +5,12 @@ body {
     color: #000;
     background: #000000;
     position: relative;
-    overflow: hidden;
+    overflow: auto; /* ให้สามารถเลื่อนหน้าได้ */
+}
+
+.main {
+    position: relative;
+    z-index: 2;
 }
 
 .background-video {
@@ -15,7 +20,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1; /* ซ่อนวิดีโอไว้เบื้องหลัง */
+    z-index: -1; /* วางอยู่ด้านหลังเนื้อหาทั้งหมด */
 }
 
 header {
@@ -23,33 +28,32 @@ header {
     font-family: 'Lobster', cursive;
     font-weight: bold;
     color: #ffffff; 
-    background-color: rgba(118, 64, 204, 0.37); /* พื้นหลังสีม่วงเข้มพร้อมความโปร่งใส 70% */
+    background-color: rgba(118, 64, 204, 0.37);
     padding: 15px;
     font-size: 2.5rem;
     position: sticky;
-    top: 0; 
+    top: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 10; /* เพื่อให้ header อยู่บนสุด */
 }
-
-.Back {
+.back-button {
     position: absolute;
     top: 20px;
     left: 20px;
     z-index: 10;
 }
 
-.Back a {
+.back-button a {
     text-decoration: none;
     color: #ffffff;
     background-color: #007BFF;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 25px;
     font-size: 1rem;
     transition: all 0.3s ease;
 }
 
-.Back a:hover {
+.back-button a:hover {
     background-color: #ff0000;
     transform: scale(1.1);
 }
@@ -78,8 +82,9 @@ header {
     text-decoration: underline;
     color: #D00000;
 }
+
 .info {
-    margin-top: 70px;
+    margin: 20px auto;
     background-color: rgba(226, 151, 220, 0.6);
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -88,10 +93,6 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 80%;
     max-width: 700px;
     text-align: center;
@@ -99,17 +100,17 @@ header {
     font-size: 1.1rem;
     line-height: 1.6;
     animation: fadeIn 1s ease-out;
+    position: relative;
 }
 
 .info img {
-    max-width: 80%; /* ปรับขนาดให้สัมพันธ์กับ container */
-    height: auto; /* รักษาสัดส่วนของรูปภาพ */
-    border-radius: 10px; /* มุมโค้งมน */
-    margin-bottom: 20px; /* ระยะห่างระหว่างรูปภาพและหัวข้อ */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
-    animation: fadeIn 1.5s ease-out; /* เพิ่มเอฟเฟกต์เลื่อนเข้ามา */
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease-out;
 }
-
 
 h2 {
     font-family: 'Lobster', cursive;
@@ -133,10 +134,42 @@ p {
     }
 }
 
-@media (max-width: 768px) {
+/* iPad Screen (768px - 1024px) */
+@media (max-width: 1024px) {
     .info {
         width: 90%;
-        padding: 20px;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    .menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .back-button a {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+
+/* Mobile Screen (Less than 768px) */
+@media (max-width: 768px) {
+    header {
+        font-size: 1.8rem;
+    }
+
+    .info {
+        width: 90%;
+        padding: 10px;
     }
 
     h2 {
@@ -146,5 +179,26 @@ p {
     p {
         font-size: 1rem;
     }
-}
 
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        margin: 5px 0;
+    }
+
+    .menu li a {
+        font-size: 1rem;
+    }
+
+    .back-button a {
+        font-size: 0.8rem;
+        padding: 8px 10px;
+    }
+
+    .info img {
+        max-width: 100%;
+    }
+}
